@@ -32,11 +32,17 @@ export function Header() {
     <header className="fixed inset-x-0 top-0 z-50 px-3 pt-3 sm:px-4 sm:pt-4">
       <div className="page-shell">
         <div
-          className={`rounded-full border transition-all duration-300 ${
+          className={`border transition-all duration-300 ${
             isScrolled
               ? "border-[#b7a892]/24 bg-[#fffdf8]/95 shadow-[0_12px_28px_rgba(34,31,26,0.07)] backdrop-blur-md"
               : "border-transparent bg-[#fffdf8]/84"
           }`}
+          style={{
+            borderTopLeftRadius: "var(--shell-radius)",
+            borderTopRightRadius: "var(--shell-radius)",
+            borderBottomLeftRadius: isScrolled ? "var(--shell-radius)" : "0px",
+            borderBottomRightRadius: isScrolled ? "var(--shell-radius)" : "0px",
+          }}
         >
           <div className="flex h-14 items-center justify-between px-4 sm:h-16 sm:px-5 lg:h-[4.5rem] lg:px-7">
             <a href="#home" className="flex flex-col">
