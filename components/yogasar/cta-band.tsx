@@ -1,45 +1,46 @@
-import { MessageCircle, Clock } from "lucide-react"
+import { Clock, MessageCircle } from "lucide-react"
 import { Button } from "@/components/ui/button"
 
-const WHATSAPP_URL = "https://wa.me/919302239879?text=Hi%2C%20I%20want%20to%20enquire%20about%20the%20online%20yoga%20classes."
-const WHATSAPP_TIMINGS_URL = "https://wa.me/919302239879?text=Hi%2C%20I%20want%20to%20ask%20about%20available%20batch%20timings."
+const JOIN_URL =
+  "https://wa.me/919302239879?text=Hi%2C%20I%20want%20to%20join%20the%20ladies-only%20online%20yoga%20classes%20in%20Hindi."
+const TIMINGS_URL =
+  "https://wa.me/919302239879?text=Hi%2C%20I%20want%20to%20ask%20about%20available%20batch%20timings%20for%20the%20Hindi%20online%20classes."
 
 export function CtaBand() {
   return (
-    <section className="py-14 sm:py-16 md:py-20 lg:py-24 xl:py-28 glass-dark relative overflow-hidden">
-      {/* Subtle gradient overlay */}
-      <div className="absolute inset-0 bg-gradient-to-br from-[#4E5B2A] via-[#5a6832] to-[#4E5B2A] -z-10" />
-      <div className="absolute top-0 right-0 w-[400px] h-[400px] bg-[#F3E87B]/10 rounded-full blur-[100px] -z-10" />
-      
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 xl:px-10">
-        <div className="text-center max-w-3xl mx-auto">
-          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-[3.25rem] font-serif text-white mb-5 sm:mb-6 md:mb-8 text-balance leading-[1.15] tracking-tight">
-            Ready to Start Online Yoga Classes in Ahmedabad?
-          </h2>
-          <p className="text-base sm:text-lg lg:text-xl text-white/80 mb-8 sm:mb-10 md:mb-12">
-            Join live yoga classes from home for just Rs 1000 per month, 5 days a week. WhatsApp now to ask about current batches and get started.
-          </p>
-          {/* Stacked on mobile, horizontal on sm+ */}
-          <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center">
+    <section className="section-wrap pt-6">
+      <div className="page-shell">
+        <div className="tone-dark rounded-[2rem] px-6 py-8 sm:px-8 sm:py-10 lg:px-10">
+          <div className="max-w-3xl">
+            <p className="text-[11px] uppercase tracking-[0.22em] text-[#d6bc78]">Ready to start</p>
+            <h2 className="mt-5 max-w-4xl font-serif text-[clamp(2.15rem,3.8vw,3.65rem)] leading-[1.06] text-[#fffdf8]">
+              Join live Hindi yoga classes for ladies from anywhere in India.
+            </h2>
+            <p className="mt-5 max-w-2xl text-sm leading-7 text-[#f5f0e7]/80 sm:text-base">
+              WhatsApp to ask about current batches, timings, and the best fit for your routine.
+            </p>
+          </div>
+
+          <div className="mt-8 flex flex-col gap-3 sm:flex-row">
             <Button
               asChild
               size="lg"
-              className="bg-[#F3E87B] hover:bg-[#e8dd6f] text-[#2D2D2D] rounded-full px-8 sm:px-10 h-12 sm:h-14 text-base font-semibold tracking-wide transition-all duration-200 hover:shadow-lg hover:scale-[1.02]"
+              className="h-12 rounded-full bg-[#d6bc78] px-7 tracking-[0.12em] text-[#221f1a] hover:bg-[#e3cc94]"
             >
-              <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer">
-                <MessageCircle className="w-5 h-5 mr-2" />
-                WhatsApp to Join
+              <a href={JOIN_URL} target="_blank" rel="noopener noreferrer">
+                <MessageCircle className="mr-2 h-5 w-5" />
+                WhatsApp to join
               </a>
             </Button>
             <Button
               asChild
               size="lg"
               variant="outline"
-              className="border-white/30 text-white bg-transparent hover:bg-white hover:text-[#2D2D2D] rounded-full px-8 sm:px-10 h-12 sm:h-14 text-base tracking-wide transition-all duration-200 backdrop-blur-sm"
+              className="h-12 rounded-full border-[#f5f0e7]/30 bg-transparent px-7 tracking-[0.12em] text-white hover:bg-white/10"
             >
-              <a href={WHATSAPP_TIMINGS_URL} target="_blank" rel="noopener noreferrer">
-                <Clock className="w-5 h-5 mr-2" />
-                Ask About Batches
+              <a href={TIMINGS_URL} target="_blank" rel="noopener noreferrer">
+                <Clock className="mr-2 h-5 w-5" />
+                Ask about batches
               </a>
             </Button>
           </div>

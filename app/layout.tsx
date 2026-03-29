@@ -1,19 +1,11 @@
 import type { Metadata, Viewport } from 'next'
-import { Ovo } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/next'
 import './globals.css'
 
-const ovo = Ovo({ 
-  subsets: ["latin"],
-  weight: "400",
-  variable: "--font-ovo",
-  display: "swap",
-});
-
 export const metadata: Metadata = {
-  title: 'Online Yoga Classes in Ahmedabad | Rs 1000/Month | 5 Days a Week | Yogasar',
-  description: 'Join beginner-friendly online yoga classes in Ahmedabad for Rs 1000 per month. Live classes 5 days a week from the comfort of home. WhatsApp to join. By Acharya Sarika Disawal.',
-  keywords: ['online yoga classes in Ahmedabad', 'yoga classes in Ahmedabad online', 'beginner online yoga classes', 'affordable yoga classes', 'live yoga classes Ahmedabad'],
+  title: 'Online Yoga Classes for Ladies in Hindi | Across India | Yogasar',
+  description: 'Join ladies-only online yoga classes in Hindi with Acharya Sarika Disawal. Live classes for women across India, 5 days a week, from the comfort of home.',
+  keywords: ['online yoga classes for ladies', 'hindi yoga classes online', 'online yoga classes for women in India', 'live yoga classes in Hindi', 'ladies yoga classes from home'],
   authors: [{ name: 'Acharya Sarika Disawal' }],
   icons: {
     icon: [
@@ -35,7 +27,7 @@ export const metadata: Metadata = {
 }
 
 export const viewport: Viewport = {
-  themeColor: '#6B7A3D',
+  themeColor: '#56663c',
   width: 'device-width',
   initialScale: 1,
 }
@@ -46,7 +38,7 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en" className={ovo.variable}>
+    <html lang="en">
       <body className="font-sans antialiased">
         {children}
         <Analytics />

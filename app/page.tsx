@@ -16,7 +16,7 @@ import { MobileWhatsAppBar } from "@/components/yogasar/mobile-whatsapp-bar"
 
 export default function YogasarPage() {
   return (
-    <main className="pb-16 md:pb-0">
+    <main className="pb-24 md:pb-0">
       <Header />
       <Hero />
       <WhyChoose />

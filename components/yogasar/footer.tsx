@@ -1,84 +1,69 @@
+import Link from "next/link"
 import { MessageCircle } from "lucide-react"
 
-const WHATSAPP_URL = "https://wa.me/919302239879?text=Hi%2C%20I%20want%20to%20enquire%20about%20the%20online%20yoga%20classes."
+const WHATSAPP_URL =
+  "https://wa.me/919302239879?text=Hi%2C%20I%20want%20to%20enquire%20about%20the%20ladies-only%20online%20yoga%20classes%20in%20Hindi."
 
 const quickLinks = [
   { label: "Home", href: "#home" },
   { label: "About", href: "#about" },
   { label: "Classes", href: "#classes" },
   { label: "Pricing", href: "#pricing" },
-  { label: "Testimonials", href: "#testimonials" },
+  { label: "Teacher", href: "#teacher" },
   { label: "FAQ", href: "#faq" },
 ]
 
 export function Footer() {
   return (
-    <footer className="bg-[#2D2D2D] text-white py-10 sm:py-12 md:py-14 lg:py-16">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 xl:px-10">
-        {/* Mobile: centered and stacked, md+: multi-column */}
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8 sm:gap-10 lg:gap-12 xl:gap-16 mb-8 sm:mb-10 md:mb-12 text-center sm:text-left">
-          {/* Brand */}
-          <div>
-            <div className="mb-4 sm:mb-5">
-              <span className="text-xl sm:text-2xl font-serif text-white tracking-wide">
-                Yogasar
-              </span>
-              <p className="text-xs sm:text-sm text-white/50 mt-1 tracking-wide">
-                By Acharya Sarika Disawal
+    <footer className="px-3 pb-6 pt-6 sm:px-4 sm:pb-8">
+      <div className="page-shell">
+        <div className="tone-dark rounded-[2rem] px-6 py-8 sm:px-8 sm:py-10">
+          <div className="grid gap-8 lg:grid-cols-[1.2fr_0.8fr_0.8fr]">
+            <div>
+              <p className="font-serif text-[2rem] text-[#fffdf8]">Yogasar</p>
+              <p className="mt-2 text-[11px] uppercase tracking-[0.22em] text-[#d6bc78]">
+                Yoga in Hindi for ladies
               </p>
+              <p className="mt-5 max-w-sm text-sm leading-7 text-[#f5f0e7]/78">
+                Live online classes for women across India with Acharya Sarika Disawal.
+              </p>
+              <a
+                href={WHATSAPP_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-5 inline-flex items-center gap-2 text-sm tracking-[0.08em] text-[#d6bc78] transition-colors hover:text-white"
+              >
+                <MessageCircle className="h-4 w-4" />
+                9302239879
+              </a>
             </div>
-            <p className="text-white/70 mb-4 sm:mb-5 text-sm sm:text-base">
-              Online Yoga Classes in Ahmedabad
-            </p>
-            <a
-              href={WHATSAPP_URL}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 text-[#F3E87B] hover:text-white transition-colors text-sm sm:text-base"
-            >
-              <MessageCircle className="w-4 h-4" />
-              9302239879
-            </a>
-          </div>
 
-          {/* Quick Links */}
-          <div>
-            <h4 className="font-medium mb-4 sm:mb-5 text-sm sm:text-base tracking-wide">Quick Links</h4>
-            <ul className="space-y-2 sm:space-y-3">
-              {quickLinks.map((link) => (
-                <li key={link.label}>
-                  <a
-                    href={link.href}
-                    className="text-white/60 hover:text-white transition-colors text-sm sm:text-base"
-                  >
+            <div>
+              <p className="text-[11px] uppercase tracking-[0.22em] text-[#d6bc78]">Navigate</p>
+              <div className="mt-5 grid gap-3">
+                {quickLinks.map((link) => (
+                  <a key={link.label} href={link.href} className="text-sm text-[#f5f0e7]/78 transition-colors hover:text-white">
                     {link.label}
                   </a>
-                </li>
-              ))}
-            </ul>
+                ))}
+              </div>
+            </div>
+
+            <div>
+              <p className="text-[11px] uppercase tracking-[0.22em] text-[#d6bc78]">Policies</p>
+              <div className="mt-5 grid gap-3">
+                <Link href="/refund-policy" className="text-sm text-[#f5f0e7]/78 transition-colors hover:text-white">
+                  Refund policy
+                </Link>
+                <p className="text-sm leading-7 text-[#f5f0e7]/60">Booked classes are non-refundable.</p>
+              </div>
+            </div>
           </div>
 
-          {/* Contact */}
-          <div className="sm:col-span-2 lg:col-span-1">
-            <h4 className="font-medium mb-4 sm:mb-5 text-sm sm:text-base tracking-wide">Get Started</h4>
-            <p className="text-white/60 mb-4 sm:mb-5 text-sm sm:text-base leading-relaxed">
-              Ready to join? WhatsApp us to ask about batch timings and get started with your yoga journey.
-            </p>
-            <a
-              href={WHATSAPP_URL}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 bg-[#6B7A3D] hover:bg-[#4E5B2A] text-white px-5 sm:px-6 py-2.5 sm:py-3 rounded-full transition-all duration-200 text-sm sm:text-base font-medium tracking-wide hover:shadow-lg"
-            >
-              <MessageCircle className="w-4 h-4" />
-              WhatsApp Now
-            </a>
-          </div>
-        </div>
+          <div className="fine-rule my-7" />
 
-        <div className="border-t border-white/10 pt-6 sm:pt-8 text-center">
-          <p className="text-white/40 text-xs sm:text-sm tracking-wide">
-            © {new Date().getFullYear()} Yogasar by Acharya Sarika Disawal. All rights reserved.
+          <p className="text-xs uppercase tracking-[0.18em] text-[#f5f0e7]/52">
+            © {new Date().getFullYear()} Yogasar. All rights reserved.
           </p>
         </div>
       </div>

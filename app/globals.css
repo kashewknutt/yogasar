@@ -4,42 +4,43 @@
 @custom-variant dark (&:is(.dark *));
 
 :root {
-  /* Yogasar Color Palette - Refined */
-  --background: #FAF8F1;
-  --foreground: #2D2D2D;
-  --card: #FFFFFF;
-  --card-foreground: #2D2D2D;
-  --popover: #FFFFFF;
-  --popover-foreground: #2D2D2D;
-  --primary: #6B7A3D;
-  --primary-foreground: #FFFFFF;
-  --secondary: #EAE2CF;
-  --secondary-foreground: #2D2D2D;
-  --muted: #EAE2CF;
-  --muted-foreground: #5A5A5A;
-  --accent: #F3E87B;
-  --accent-foreground: #2D2D2D;
+  --background: #f5f0e7;
+  --foreground: #221f1a;
+  --card: #fffdf8;
+  --card-foreground: #221f1a;
+  --popover: #fffdf8;
+  --popover-foreground: #221f1a;
+  --primary: #56663c;
+  --primary-foreground: #fffdf8;
+  --secondary: #e8dece;
+  --secondary-foreground: #312b24;
+  --muted: #ede4d6;
+  --muted-foreground: #5c554b;
+  --accent: #d6bc78;
+  --accent-foreground: #221f1a;
   --destructive: #DC2626;
   --destructive-foreground: #FFFFFF;
-  --border: #E5DDD0;
-  --input: #E5DDD0;
-  --ring: #6B7A3D;
-  --chart-1: #6B7A3D;
-  --chart-2: #4E5B2A;
-  --chart-3: #F3E87B;
-  --chart-4: #EAE2CF;
-  --chart-5: #FAF8F1;
-  --radius: 1rem;
-  
-  /* Custom Yogasar tokens */
-  --olive: #6B7A3D;
-  --olive-deep: #4E5B2A;
-  --lemon: #F3E87B;
-  --ivory: #FAF8F1;
-  --sand: #EAE2CF;
-  --charcoal: #2D2D2D;
-  --mist: #F5F3EE;
-  --stone: #D4CCC0;
+  --border: #d6cab8;
+  --input: #d6cab8;
+  --ring: #56663c;
+  --chart-1: #56663c;
+  --chart-2: #384529;
+  --chart-3: #d6bc78;
+  --chart-4: #e8dece;
+  --chart-5: #f5f0e7;
+  --radius: 1.25rem;
+
+  --olive: #56663c;
+  --olive-deep: #384529;
+  --gold: #d6bc78;
+  --ivory: #fffdf8;
+  --sand: #e8dece;
+  --charcoal: #221f1a;
+  --mist: #f0e8db;
+  --stone: #b7a892;
+  --header-height: 3.5rem;
+  --page-gutter: clamp(1rem, 2.4vw, 2rem);
+  --section-space: clamp(4rem, 7vw, 6.5rem);
 }
 
 .dark {
@@ -70,10 +71,8 @@
 }
 
 @theme inline {
-  /* Apple-inspired system sans stack for body/UI */
-  --font-sans: -apple-system, BlinkMacSystemFont, "SF Pro Text", "SF Pro Display", "Helvetica Neue", "Segoe UI", sans-serif;
-  /* Ovo for elegant display headings */
-  --font-serif: var(--font-ovo), Georgia, serif;
+  --font-sans: "Aptos", "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+  --font-serif: "Iowan Old Style", "Palatino Linotype", "Book Antiqua", Georgia, serif;
   --font-mono: 'SF Mono', 'Menlo', monospace;
   --color-background: var(--background);
   --color-foreground: var(--foreground);
@@ -106,10 +105,9 @@
   --radius-2xl: calc(var(--radius) + 8px);
   --radius-3xl: calc(var(--radius) + 16px);
   
-  /* Yogasar custom colors */
   --color-olive: var(--olive);
   --color-olive-deep: var(--olive-deep);
-  --color-lemon: var(--lemon);
+  --color-gold: var(--gold);
   --color-ivory: var(--ivory);
   --color-sand: var(--sand);
   --color-charcoal: var(--charcoal);
@@ -128,26 +126,126 @@
   }
   body {
     @apply bg-background text-foreground;
+    background-image:
+      radial-gradient(circle at top right, rgba(214, 188, 120, 0.14), transparent 22rem),
+      linear-gradient(180deg, #f5f0e7 0%, #f8f3eb 35%, #fffdf8 100%);
+    min-height: 100vh;
+  }
+  ::selection {
+    background: rgba(86, 102, 60, 0.18);
+  }
+  h1, h2, h3, h4 {
+    letter-spacing: -0.03em;
+    text-wrap: balance;
+  }
+  p {
+    text-wrap: pretty;
+  }
+  a {
+    -webkit-tap-highlight-color: transparent;
   }
 }
 
-/* Glassmorphism utility classes */
-.glass-card {
-  background: rgba(255, 255, 255, 0.7);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border: 1px solid rgba(255, 255, 255, 0.4);
+@media (min-width: 640px) {
+  :root {
+    --header-height: 4rem;
+  }
 }
 
-.glass-card-subtle {
-  background: rgba(255, 255, 255, 0.5);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
-  border: 1px solid rgba(255, 255, 255, 0.3);
+@media (min-width: 1024px) {
+  :root {
+    --header-height: 4.5rem;
+    --page-gutter: clamp(1.5rem, 4vw, 3.25rem);
+  }
 }
 
-.glass-dark {
-  background: rgba(78, 91, 42, 0.85);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
+@layer components {
+  .page-shell {
+    width: min(100% - (var(--page-gutter) * 2), 76rem);
+    margin-inline: auto;
+  }
+
+  .section-wrap {
+    padding-block: var(--section-space);
+  }
+
+  .section-frame {
+    position: relative;
+    border: 1px solid rgba(183, 168, 146, 0.22);
+    background: linear-gradient(180deg, rgba(255, 253, 248, 0.96), rgba(245, 240, 231, 0.88));
+    border-radius: clamp(1.5rem, 2vw, 2.5rem);
+    box-shadow: 0 24px 56px rgba(34, 31, 26, 0.06);
+    overflow: clip;
+  }
+
+  .section-frame::before {
+    content: "";
+    position: absolute;
+    inset: 1rem;
+    border-radius: inherit;
+    border: 1px solid rgba(183, 168, 146, 0.1);
+    pointer-events: none;
+  }
+
+  .panel {
+    border: 1px solid rgba(183, 168, 146, 0.18);
+    background: rgba(255, 253, 248, 0.9);
+    border-radius: clamp(1.1rem, 1.6vw, 1.75rem);
+    box-shadow: 0 14px 32px rgba(34, 31, 26, 0.05);
+  }
+
+  .panel-soft {
+    border: 1px solid rgba(183, 168, 146, 0.14);
+    background: rgba(248, 243, 235, 0.78);
+    border-radius: clamp(1.1rem, 1.6vw, 1.75rem);
+  }
+
+  .eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.55rem;
+    padding: 0.55rem 0.9rem;
+    border-radius: 999px;
+    border: 1px solid rgba(86, 102, 60, 0.12);
+    background: rgba(255, 253, 248, 0.82);
+    color: var(--olive-deep);
+    font-size: 0.74rem;
+    font-weight: 600;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+  }
+
+  .eyebrow::before {
+    content: "";
+    width: 0.45rem;
+    height: 0.45rem;
+    border-radius: 999px;
+    background: var(--gold);
+  }
+
+  .section-title {
+    font-family: var(--font-serif);
+    font-size: clamp(1.95rem, 3.2vw, 3.2rem);
+    line-height: 1.06;
+    color: var(--charcoal);
+  }
+
+  .section-lead {
+    max-width: 46rem;
+    color: rgba(34, 31, 26, 0.74);
+    font-size: clamp(0.98rem, 1.4vw, 1.08rem);
+    line-height: 1.65;
+  }
+
+  .tone-dark {
+    background:
+      radial-gradient(circle at top right, rgba(214, 188, 120, 0.14), transparent 18rem),
+      linear-gradient(135deg, #384529 0%, #485938 52%, #56663c 100%);
+    color: #fffdf8;
+  }
+
+  .fine-rule {
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(183, 168, 146, 0.8), transparent);
+  }
 }

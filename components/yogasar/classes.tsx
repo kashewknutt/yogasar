@@ -1,209 +1,165 @@
 "use client"
-// v2: Parallax scroll cards with sticky stacking effect
+
 import Image from "next/image"
 import { useRef } from "react"
 import { motion, useScroll, useTransform } from "framer-motion"
 
 const classFeatures = [
   {
-    title: "Stretching & Flexibility",
-    description: "Improve mobility and reduce everyday stiffness through guided movement.",
+    title: "Flexibility without forcing the body",
+    description:
+      "Gentle guided movement to ease stiffness, open the joints, and help the body move more comfortably in daily life.",
     image: "/images/class-flexibility.jpg",
+    note: "For ladies starting or restarting practice",
   },
   {
-    title: "Posture & Body Awareness",
-    description: "Build better alignment and movement habits for daily comfort.",
+    title: "Posture and alignment awareness",
+    description:
+      "Simple cues in Hindi help you understand how to sit, stand, and move with better balance and control.",
     image: "/images/class-posture.jpg",
+    note: "Clear instruction for home practice",
   },
   {
-    title: "Breathing & Calmness",
-    description: "Simple breathing techniques to help you feel more centered and relaxed.",
+    title: "Breath, steadiness, and calm",
+    description:
+      "Each class includes breathing-based work that supports focus, relaxation, and a more settled mind.",
     image: "/images/class-breathing.jpg",
+    note: "Useful for busy routines across India",
   },
   {
-    title: "Strength & Balance",
-    description: "Develop stability, body control, and a stronger foundation over time.",
+    title: "Strength and everyday confidence",
+    description:
+      "Build stability and body confidence gradually so the practice feels sustainable instead of overwhelming.",
     image: "/images/class-strength.jpg",
+    note: "Live feedback in Hindi",
   },
 ]
 
-function ParallaxCard({ 
-  feature, 
-  index 
-}: { 
-  feature: typeof classFeatures[0]
-  index: number 
+function DesktopCard({
+  feature,
+  index,
+}: {
+  feature: (typeof classFeatures)[number]
+  index: number
 }) {
-  const cardRef = useRef<HTMLDivElement>(null)
-  
+  const ref = useRef<HTMLDivElement>(null)
   const { scrollYProgress } = useScroll({
-    target: cardRef,
-    offset: ["start end", "end start"]
+    target: ref,
+    offset: ["start end", "end start"],
   })
-  
-  // Image moves slower than card (parallax effect)
-  const imageY = useTransform(scrollYProgress, [0, 1], ["0%", "20%"])
-  const imageScale = useTransform(scrollYProgress, [0, 0.5, 1], [1.1, 1.05, 1])
-  
+
+  const imageScale = useTransform(scrollYProgress, [0, 0.55, 1], [1.08, 1.03, 1])
+  const imageY = useTransform(scrollYProgress, [0, 1], ["-4%", "6%"])
+  const cardY = useTransform(scrollYProgress, [0, 1], [48, -24])
+
   return (
-    <div 
-      ref={cardRef}
-      className="sticky"
-      style={{ 
-        top: `${80 + index * 20}px`,
-        zIndex: index + 1,
-      }}
-    >
-      <motion.div 
-        className="glass-card rounded-2xl sm:rounded-3xl overflow-hidden shadow-xl border border-[#E5DDD0]/40 bg-white/90 backdrop-blur-sm"
-        initial={{ opacity: 0, y: 60 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true, amount: 0.2 }}
-        transition={{ 
-          duration: 0.7, 
-          ease: [0.22, 1, 0.36, 1],
-          delay: index * 0.05 
-        }}
+    <div ref={ref} className="sticky" style={{ top: `calc(var(--header-height) + ${1.25 + index * 0.9}rem)` }}>
+      <motion.article
+        style={{ y: cardY, zIndex: 10 + index }}
+        className="panel grid min-h-[31rem] grid-cols-[0.92fr_1.08fr] items-stretch overflow-hidden"
       >
-        {/* Parallax Image Container */}
-        <div className="relative aspect-[16/9] overflow-hidden">
-          <motion.div 
-            className="absolute inset-0 w-full h-[120%]"
-            style={{ 
-              y: imageY,
-              scale: imageScale,
-            }}
-          >
+        <div className="flex flex-col justify-between px-7 py-7 lg:px-10 lg:py-9">
+          <div>
+            <p className="text-[11px] uppercase tracking-[0.24em] text-[#56663c]">
+              Focus 0{index + 1}
+            </p>
+            <h3 className="mt-5 max-w-md font-serif text-[clamp(1.95rem,2.4vw,2.7rem)] leading-[1.06] text-[#221f1a]">
+              {feature.title}
+            </h3>
+            <p className="mt-5 max-w-md text-[1.02rem] leading-8 text-[#5c554b]">{feature.description}</p>
+          </div>
+
+          <div className="grid gap-4 lg:grid-cols-[auto_1fr] lg:items-end">
+            <div className="rounded-[1.25rem] bg-[#384529] px-4 py-4 text-[#fffdf8]">
+              <p className="text-[11px] uppercase tracking-[0.22em] text-[#d6bc78]">Class note</p>
+              <p className="mt-2 max-w-[12ch] text-sm leading-relaxed">{feature.note}</p>
+            </div>
+            <div className="panel-soft px-4 py-4">
+              <p className="text-[11px] uppercase tracking-[0.22em] text-[#56663c]">Format</p>
+              <p className="mt-2 text-sm leading-relaxed text-[#4b4339]">
+                Live instruction that helps the practice stay calm, clear, and easier to follow from home.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div className="relative min-h-full overflow-hidden bg-[#e8dece]">
+          <motion.div className="absolute inset-0" style={{ scale: imageScale, y: imageY }}>
             <Image
               src={feature.image}
               alt={feature.title}
               fill
               className="object-cover"
-              sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 600px"
+              sizes="(max-width: 1024px) 100vw, 52vw"
               priority={index < 2}
             />
           </motion.div>
-          
-          {/* Gradient overlay */}
-          <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent" />
-          
-          {/* Number badge */}
-          <div className="absolute top-4 left-4 w-10 h-10 rounded-full bg-white/90 backdrop-blur-sm flex items-center justify-center shadow-lg">
-            <span className="text-[#6B7A3D] font-semibold text-lg">{index + 1}</span>
-          </div>
+          <div className="absolute inset-0 bg-gradient-to-l from-transparent via-transparent to-[#221f1a]/18" />
         </div>
-
-        {/* Content */}
-        <div className="p-6 sm:p-8">
-          <h3 className="text-xl sm:text-2xl lg:text-[1.65rem] font-serif text-[#2D2D2D] mb-3 tracking-tight">
-            {feature.title}
-          </h3>
-          <p className="text-[#5A5A5A] leading-relaxed text-base lg:text-[17px]">
-            {feature.description}
-          </p>
-        </div>
-      </motion.div>
+      </motion.article>
     </div>
   )
 }
 
-function MobileCard({ 
-  feature, 
-  index 
-}: { 
-  feature: typeof classFeatures[0]
-  index: number 
+function MobileCard({
+  feature,
+  index,
+}: {
+  feature: (typeof classFeatures)[number]
+  index: number
 }) {
   return (
-    <motion.div 
-      className="glass-card rounded-2xl overflow-hidden shadow-lg border border-[#E5DDD0]/40"
-      initial={{ opacity: 0, y: 40 }}
+    <motion.article
+      initial={{ opacity: 0, y: 28 }}
       whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, amount: 0.3 }}
-      transition={{ duration: 0.6, delay: index * 0.1 }}
+      viewport={{ once: true, amount: 0.22 }}
+      transition={{ duration: 0.55, delay: index * 0.06 }}
+      className="panel overflow-hidden"
     >
-      <div className="relative aspect-[16/10] overflow-hidden">
+      <div className="relative aspect-[16/11] overflow-hidden">
         <Image
           src={feature.image}
           alt={feature.title}
           fill
           className="object-cover"
-          sizes="(max-width: 768px) 100vw, 400px"
+          sizes="100vw"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/25 to-transparent" />
-        <div className="absolute top-3 left-3 w-8 h-8 rounded-full bg-white/90 flex items-center justify-center shadow-md">
-          <span className="text-[#6B7A3D] font-semibold text-sm">{index + 1}</span>
-        </div>
       </div>
-      <div className="p-5">
-        <h3 className="text-lg sm:text-xl font-serif text-[#2D2D2D] mb-2 tracking-tight">
-          {feature.title}
-        </h3>
-        <p className="text-[#5A5A5A] leading-relaxed text-sm sm:text-base">
-          {feature.description}
-        </p>
+      <div className="space-y-4 px-5 py-5">
+        <p className="text-[11px] uppercase tracking-[0.24em] text-[#56663c]">Focus 0{index + 1}</p>
+        <h3 className="font-serif text-[1.5rem] leading-[1.12] text-[#221f1a]">{feature.title}</h3>
+        <p className="text-sm leading-7 text-[#5c554b]">{feature.description}</p>
+        <div className="rounded-2xl bg-[#ede4d6] px-4 py-3 text-sm leading-relaxed text-[#4b4339]">{feature.note}</div>
       </div>
-    </motion.div>
+    </motion.article>
   )
 }
 
 export function Classes() {
   return (
-    <section id="classes" className="py-16 sm:py-20 md:py-24 lg:py-28 bg-gradient-to-b from-[#FAF8F1] to-[#F5F3EE]">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        
-        {/* Mobile & Tablet: Simple stacked layout */}
-        <div className="lg:hidden">
-          <div className="text-center max-w-xl mx-auto mb-10">
-            <h2 className="text-2xl sm:text-3xl font-serif text-[#2D2D2D] mb-4 text-balance leading-tight tracking-tight">
-              What the Online Classes Focus On
-            </h2>
-            <p className="text-base text-[#5A5A5A] leading-relaxed">
-              Each session helps you move better, breathe better, and feel better.
-            </p>
-          </div>
-
-          <div className="grid gap-5 sm:gap-6 max-w-md mx-auto">
-            {classFeatures.map((feature, index) => (
-              <MobileCard key={index} feature={feature} index={index} />
-            ))}
-          </div>
-
-          <p className="text-center text-[#6B7A3D] font-medium text-sm mt-8">
-            Suitable for beginners and those restarting yoga.
+    <section id="classes" className="section-wrap">
+      <div className="page-shell">
+        <div className="mb-10 max-w-3xl sm:mb-12">
+          <span className="eyebrow mb-5">Class focus</span>
+          <h2 className="section-title max-w-3xl lg:max-w-4xl">
+            What the online classes focus on.
+          </h2>
+          <p className="section-lead mt-5">
+            Each class builds mobility, steadiness, breathing awareness, and confidence in a way
+            that feels approachable for regular home practice.
           </p>
         </div>
 
-        {/* Desktop: Parallax sticky card stack with editorial heading */}
-        <div className="hidden lg:grid lg:grid-cols-2 lg:gap-16 xl:gap-20">
-          
-          {/* Left: Sticky heading */}
-          <div className="lg:sticky lg:top-28 lg:self-start lg:h-fit">
-            <div className="max-w-md">
-              <span className="inline-block text-[#6B7A3D] text-sm font-semibold tracking-widest uppercase mb-5">
-                Class Focus Areas
-              </span>
-              <h2 className="text-4xl xl:text-5xl font-serif text-[#2D2D2D] mb-6 text-balance leading-[1.1] tracking-tight">
-                What the Online Classes Focus On
-              </h2>
-              <p className="text-lg text-[#5A5A5A] leading-relaxed mb-8">
-                Each session is designed to help you move better, breathe better, and feel better with regular practice.
-              </p>
-              <div className="flex items-center gap-3 py-4 px-5 rounded-xl bg-[#6B7A3D]/5 border border-[#6B7A3D]/10">
-                <div className="w-2 h-2 rounded-full bg-[#6B7A3D] shrink-0" />
-                <p className="text-[#6B7A3D] font-medium text-sm">
-                  Suitable for beginners as well as people restarting yoga.
-                </p>
-              </div>
-            </div>
-          </div>
+        <div className="grid gap-5 lg:hidden">
+          {classFeatures.map((feature, index) => (
+            <MobileCard key={feature.title} feature={feature} index={index} />
+          ))}
+        </div>
 
-          {/* Right: Parallax sticky cards */}
-          <div className="relative pb-[40vh]">
+        <div className="hidden lg:block">
+          <div className="relative space-y-7 pb-32">
             {classFeatures.map((feature, index) => (
-              <div key={index} className="mb-6">
-                <ParallaxCard feature={feature} index={index} />
-              </div>
+              <DesktopCard key={feature.title} feature={feature} index={index} />
             ))}
           </div>
         </div>
