@@ -56,7 +56,7 @@ function DesktopCard({
     <div ref={ref} className="sticky" style={{ top: `calc(var(--header-height) + ${1.25 + index * 0.9}rem)` }}>
       <motion.article
         style={{ y: cardY, zIndex: 10 + index }}
-        className="panel grid min-h-[31rem] grid-cols-[0.92fr_1.08fr] items-stretch overflow-hidden"
+        className="panel grid min-h-[31rem] grid-cols-[0.92fr_1.08fr] items-stretch overflow-hidden bg-[#fffdf8]"
       >
         <div className="flex flex-col justify-between px-7 py-7 lg:px-10 lg:py-9">
           <div>
@@ -114,7 +114,7 @@ function MobileCard({
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, amount: 0.22 }}
       transition={{ duration: 0.55, delay: index * 0.06 }}
-      className="panel overflow-hidden"
+      className="panel overflow-hidden bg-[#fffdf8]"
     >
       <div className="relative aspect-[16/11] overflow-hidden">
         <Image
