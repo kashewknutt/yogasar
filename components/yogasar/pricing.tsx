@@ -6,7 +6,7 @@ const WHATSAPP_URL =
 
 const includedFeatures = [
   "Live online classes 5 days a week",
-  "Hindi instruction",
+  "Hindi instructions",
   "Ladies-only batches",
   "Join from anywhere in India",
 ]
@@ -19,13 +19,13 @@ export function Pricing() {
           <div className="grid gap-8 lg:grid-cols-[0.88fr_1.12fr] lg:items-center">
             <div className="max-w-md">
               <span className="eyebrow mb-5">Simple pricing</span>
-              <h2 className="section-title max-w-lg">Rs 1000 per month.</h2>
+              <h2 className="section-title max-w-lg">Made for you.</h2>
               <p className="section-lead mt-4">
                 One clear plan for live Hindi yoga classes from home.
               </p>
             </div>
 
-            <div className="panel px-6 py-6 sm:px-7 sm:py-7">
+            <div className="px-6 py-6 sm:px-7 sm:py-7">
               <div className="flex flex-col gap-6 lg:flex-row lg:items-start lg:justify-between">
                 <div>
                   <p className="text-[11px] uppercase tracking-[0.22em] text-[#56663c]">Monthly plan</p>

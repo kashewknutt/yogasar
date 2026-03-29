@@ -23,8 +23,8 @@ export default function YogasarPage() {
       <About />
       <Teacher />
       <Classes />
-      <Pricing />
       <Benefits />
+      <Pricing />
       <WhoItsFor />
       <HowItWorks />
       <Testimonials />

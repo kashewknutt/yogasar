@@ -10,28 +10,32 @@ const classFeatures = [
     description:
       "Gentle guided movement to ease stiffness, open the joints, and help the body move more comfortably in daily life.",
     image: "/images/class-flexibility.jpg",
-    note: "For ladies starting or restarting practice",
+    note: "For finding peace",
+    format: "Live instructions that helps to stay calm, clear, and focused in life.",
   },
   {
     title: "Posture and alignment awareness",
     description:
-      "Simple cues in Hindi help you understand how to sit, stand, and move with better balance and control.",
+      "Clear, easy instructions in Hindi guide you to sit, stand, and move with improved balance, posture, and confidence.",
     image: "/images/class-posture.jpg",
-    note: "Clear instruction for home practice",
+    note: "Clarity in practice",
+    format: "Simple cues in Hindi help you understand how to move with better balance and control.",
   },
   {
     title: "Breath, steadiness, and calm",
     description:
       "Each class includes breathing-based work that supports focus, relaxation, and a more settled mind.",
     image: "/images/class-breathing.jpg",
-    note: "Useful for busy routines across India",
+    note: "Useful for busy routines",
+    format: "Breathing-based work that supports focus, relaxation, and a more settled mind.",
   },
   {
     title: "Strength and everyday confidence",
     description:
-      "Build stability and body confidence gradually so the practice feels sustainable instead of overwhelming.",
+      "Build strength, stability, and body confidence at a steady pace so the practice feels supportive, sustainable, and never overwhelming.",
     image: "/images/class-strength.jpg",
     note: "Live feedback in Hindi",
+    format: "Build stability gradually so the practice feels sustainable instead of overwhelming.",
   },
 ]
 
@@ -77,7 +81,7 @@ function DesktopCard({
             <div className="panel-soft px-4 py-4">
               <p className="text-[11px] uppercase tracking-[0.22em] text-[#56663c]">Format</p>
               <p className="mt-2 text-sm leading-relaxed text-[#4b4339]">
-                Live instruction that helps the practice stay calm, clear, and easier to follow from home.
+                {feature.format}
               </p>
             </div>
           </div>

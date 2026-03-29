@@ -50,13 +50,17 @@ export function FAQ() {
             </h2>
           </div>
 
-          <Accordion type="single" collapsible className="grid gap-3">
+          <Accordion type="single" collapsible className="mt-2">
             {faqs.map((faq, index) => (
-              <AccordionItem key={faq.question} value={`item-${index}`} className="panel overflow-hidden px-5 sm:px-6">
-                <AccordionTrigger className="py-4 text-left text-base font-medium text-[#221f1a] hover:text-[#56663c] hover:no-underline">
+              <AccordionItem
+                key={faq.question}
+                value={`item-${index}`}
+                className="border-0 border-b border-[#d6cab8]/45 bg-transparent px-0"
+              >
+                <AccordionTrigger className="py-5 text-left text-base font-medium text-[#221f1a] hover:text-[#56663c] hover:no-underline sm:text-[1.05rem]">
                   {faq.question}
                 </AccordionTrigger>
-                <AccordionContent className="pb-5 text-sm leading-7 text-[#5c554b] sm:text-base">
+                <AccordionContent className="max-w-3xl pb-5 pr-8 text-sm leading-7 text-[#5c554b] sm:text-base">
                   {faq.answer}
                 </AccordionContent>
               </AccordionItem>
