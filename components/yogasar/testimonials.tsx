@@ -1,24 +1,3 @@
-const testimonials = [
-  {
-    name: "Rajat D.",
-    label: "Mumbai",
-    quote:
-      "The classes brought more peace and steadiness into a hectic routine. The teaching style is grounded and easy to continue with.",
-  },
-  {
-    name: "Riddhi P.",
-    label: "Indore",
-    quote:
-      "Joining from home makes it realistic to stay regular. I already feel less stiffness and more ease in my body.",
-  },
-  {
-    name: "Kunal M.",
-    label: "Surat",
-    quote:
-      "The structure is practical and the monthly fee is simple. It works well for anyone who wants guided yoga without unnecessary complexity.",
-  },
-]
-
 export function Testimonials() {
   return (
     <section id="testimonials" className="section-wrap pt-6">
@@ -31,22 +10,30 @@ export function Testimonials() {
             </h2>
           </div>
 
-          <div className="grid gap-4">
-            {testimonials.map((testimonial, index) => (
-              <article
-                key={testimonial.name}
-                className={`panel px-6 py-6 ${index === 1 ? "lg:ml-10" : ""}`}
-              >
-                <p className="text-base leading-8 text-[#312b24] sm:text-lg">
-                  &ldquo;{testimonial.quote}&rdquo;
-                </p>
-                <div className="mt-5 flex items-center justify-between">
-                  <p className="font-serif text-2xl text-[#221f1a]">{testimonial.name}</p>
-                  <p className="text-[11px] uppercase tracking-[0.22em] text-[#56663c]">{testimonial.label}</p>
-                </div>
-              </article>
-            ))}
-          </div>
+          <article className="panel px-6 py-6 lg:ml-10">
+            <div className="space-y-4 text-base leading-8 text-[#312b24] sm:text-lg">
+              <p>
+                &ldquo;I had a wonderful experience learning yoga here. The teacher is
+                extremely knowledgeable, patient, and attentive to each
+                student&apos;s needs. Every session is well-structured and
+                balanced, focusing not just on physical postures but also on
+                breathing techniques and mental relaxation.&rdquo;
+              </p>
+              <p>
+                &ldquo;I&apos;ve noticed a significant improvement in my flexibility
+                and strength since joining. I highly recommend Acharyaa Sarika
+                Disawal yoga classes to anyone looking to improve their health
+                and find inner peace.&rdquo;
+              </p>
+            </div>
+
+            <div className="mt-5 flex items-center justify-between">
+              <p className="font-serif text-2xl text-[#221f1a]">Siddhi Shah</p>
+              <p className="text-[11px] uppercase tracking-[0.22em] text-[#56663c]">
+                Student
+              </p>
+            </div>
+          </article>
         </div>
       </div>
     </section>
