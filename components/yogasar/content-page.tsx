@@ -17,6 +17,10 @@ export type ContentSection = {
   title: string
   body: string[]
   bullets?: string[]
+  links?: Array<{
+    href: string
+    label: string
+  }>
 }
 
 export type RelatedLink = {
@@ -133,6 +137,21 @@ function Sections({ items }: { items: ContentSection[] }) {
                 </li>
               ))}
             </ul>
+          ) : null}
+          {section.links?.length ? (
+            <div className="mt-5 flex flex-wrap gap-3">
+              {section.links.map((link) => (
+                <a
+                  key={link.href}
+                  href={link.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center rounded-full border border-[#56663c]/20 bg-[#f8f3eb] px-4 py-2 text-sm font-medium text-[#384529] transition-colors hover:bg-[#ede4d6]"
+                >
+                  {link.label}
+                </a>
+              ))}
+            </div>
           ) : null}
         </article>
       ))}

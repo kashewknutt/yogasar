@@ -50,7 +50,7 @@ export default function PricingPage() {
       <SharedContentPage
         eyebrow="Pricing"
         title="Simple pricing for a live, guided yoga routine"
-        intro="This page gives pricing its own crawlable destination. That helps both users and search engines understand the commercial offer without digging through the homepage."
+        intro="Everything on this page is meant to keep the pricing simple and easy to understand before you ask about batches."
         highlights={[
           { label: "Plan", value: "Monthly" },
           { label: "Price", value: "Rs 1000" },
@@ -62,7 +62,7 @@ export default function PricingPage() {
             title: "One clear offer is better than cluttered pricing",
             body: [
               "For this business, pricing works best when it is simple. A single clear monthly plan reduces friction and makes WhatsApp enquiry easier.",
-              "This page should keep the offer easy to understand rather than trying to mimic a complex SaaS pricing table.",
+              "The goal is to keep the offer easy to understand instead of overcomplicating it with unnecessary choices.",
             ],
           },
           {

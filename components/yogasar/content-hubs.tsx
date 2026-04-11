@@ -5,7 +5,7 @@ const featuredPages = [
     href: "/online-yoga-classes",
     title: "Online yoga classes",
     description:
-      "The main service hub for ladies-only live classes in Hindi, with class format, who it suits, and next steps.",
+      "Learn about the live class format, who the classes suit, and how women across India can join.",
   },
   {
     href: "/online-yoga-classes-in-hindi",
@@ -23,7 +23,7 @@ const featuredPages = [
     href: "/blog/surya-namaskar-steps",
     title: "Surya Namaskar steps",
     description:
-      "Educational content for one of the highest-demand yoga searches, linked back to guided class support.",
+      "A simple guide for women who want to understand the sequence more clearly and practise with confidence.",
   },
   {
     href: "/blog/yoga-for-beginners-at-home",
@@ -35,7 +35,7 @@ const featuredPages = [
     href: "/faq",
     title: "Common questions",
     description:
-      "A crawlable FAQ page that answers the class format, language, pricing, and joining process directly.",
+      "Clear answers about the class format, language, pricing, and joining process.",
   },
 ]
 
@@ -46,11 +46,11 @@ export function ContentHubs() {
         <div className="mb-8 max-w-3xl">
           <span className="eyebrow mb-5">Explore Yogasar</span>
           <h2 className="section-title">
-            Crawlable pages that turn the site from a landing page into a real content hub.
+            Explore helpful pages about the classes, the teacher, and home yoga practice.
           </h2>
           <p className="section-lead mt-5">
-            These pages are built around real search intent in India and still stay anchored to the
-            actual offer: live online yoga classes in Hindi for women.
+            Whether you want class details, beginner guidance, or simple answers before joining,
+            these pages help you understand Yogasar more clearly.
           </p>
         </div>
 

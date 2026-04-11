@@ -35,7 +35,7 @@ export default function ContactPage() {
       <SharedContentPage
         eyebrow="Contact"
         title="Ask about batches, timings, and whether the classes fit you"
-        intro="The contact page should make the enquiry path obvious. For Yogasar, that means making WhatsApp the primary action while still presenting the business details cleanly for trust and crawlability."
+        intro="If you want to know about timings, class style, or whether the classes are right for you, this is the simplest place to start."
         highlights={[
           { label: "Primary contact", value: siteConfig.contact.phoneDisplay },
           { label: "Best use", value: "Batch timings and suitability questions" },
@@ -46,7 +46,7 @@ export default function ContactPage() {
           {
             title: "What to ask before joining",
             body: [
-              "Most people contact Yogasar to ask whether there is a batch timing that fits their day, whether beginners can join, and whether the class format is right for them. This page should state that plainly so visitors know exactly why they are reaching out.",
+              "Most people reach out to ask whether there is a batch timing that fits their day, whether beginners can join, and whether the class format feels right for them.",
             ],
             bullets: [
               "Current batch timings",
@@ -56,9 +56,9 @@ export default function ContactPage() {
             ],
           },
           {
-            title: "Why a contact page matters for SEO too",
+            title: "Why this page is useful",
             body: [
-              "Search engines use contact and trust pages as business legitimacy signals. A dedicated contact page also reduces the risk that all commercial intent is forced back onto the homepage.",
+              "A clear contact page makes it easier to ask practical questions before joining and keeps the next step simple for anyone considering the classes.",
             ],
           },
         ]}

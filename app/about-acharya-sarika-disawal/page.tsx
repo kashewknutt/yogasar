@@ -42,7 +42,7 @@ export default function AboutTeacherPage() {
       <SharedContentPage
         eyebrow="About the teacher"
         title="Meet Acharya Sarika Disawal"
-        intro="This page exists to strengthen trust. It gives search engines and prospective students a clear, dedicated profile for the teacher behind the classes instead of leaving that information scattered across the homepage."
+        intro="Learn more about the teacher behind Yogasar and the approach she brings to live online yoga classes in Hindi."
         highlights={[
           { label: "Teacher", value: siteConfig.teacher.name },
           { label: "Credential", value: siteConfig.teacher.credential },
@@ -53,8 +53,8 @@ export default function AboutTeacherPage() {
           {
             title: "A teacher page should show more than a short blurb",
             body: [
-              "A dedicated teacher page is one of the strongest trust additions for Yogasar. It gives users and search engines one clear place to understand who teaches the classes, what her background is, and why the class style is distinct.",
-              "The page should stay specific and factual. Overstatement weakens trust. Clarity strengthens it.",
+              "A dedicated teacher page helps you understand who leads the classes, what her background is, and what kind of class experience you can expect.",
+              "The best introduction is clear and factual. It should help you feel informed without sounding exaggerated.",
             ],
           },
           {
@@ -70,9 +70,9 @@ export default function AboutTeacherPage() {
             ],
           },
           {
-            title: "How this page should support the rest of the site",
+            title: "What you can explore next",
             body: [
-              "The teacher page should link out to the main online class page, pricing page, FAQ page, and contact page. Those internal links make the trust signal useful rather than isolated.",
+              "If you want to know more after reading about the teacher, the next helpful pages are the main class page, pricing, FAQ, and contact.",
             ],
           },
         ]}
@@ -88,7 +88,7 @@ export default function AboutTeacherPage() {
           {
             question: "Why have a separate teacher page?",
             answer:
-              "Because trust, authorship, and teacher identity are important both for users and for search visibility.",
+              "Because many students want to understand who teaches the classes before they decide whether to join.",
           },
         ]}
         relatedLinks={[

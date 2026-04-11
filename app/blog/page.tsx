@@ -53,14 +53,13 @@ export default function BlogPage() {
 
               <div className="mt-6 max-w-4xl">
                 <span className="eyebrow mb-5">Yoga knowledge hub</span>
-                <h1 className="font-serif text-[clamp(2.3rem,4.8vw,4.3rem)] leading-[1.02] text-[#221f1a]">
-                  Articles built around how people in India actually search for yoga help.
-                </h1>
-                <p className="section-lead mt-5 max-w-3xl">
-                  This content hub supports the commercial pages by covering beginners, home
-                  practice, women-focused topics, breathwork, and morning routines without drifting
-                  into generic filler.
-                </p>
+              <h1 className="font-serif text-[clamp(2.3rem,4.8vw,4.3rem)] leading-[1.02] text-[#221f1a]">
+                  Simple reading for beginners, home practice, breathwork, and women-focused yoga.
+              </h1>
+              <p className="section-lead mt-5 max-w-3xl">
+                  These pages are here to help you understand the classes, build a steadier routine,
+                  and learn a little more before you decide what suits you best.
+              </p>
               </div>
             </div>
           </div>

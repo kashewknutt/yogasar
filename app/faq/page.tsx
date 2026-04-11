@@ -50,7 +50,7 @@ export default function FAQPage() {
       <SharedContentPage
         eyebrow="Frequently asked questions"
         title="Clear answers before you join a class"
-        intro="A crawlable FAQ page helps answer engine visibility, supports rich results, and gives visitors a focused destination for practical questions about the offer."
+        intro="This page brings together the most common practical questions people ask before joining the classes."
         highlights={[
           { label: "Audience", value: "Women and beginners" },
           { label: "Language", value: "Hindi" },
@@ -61,7 +61,7 @@ export default function FAQPage() {
           {
             title: "Why a dedicated FAQ page matters",
             body: [
-              "Important class questions should not only live inside an accordion on the homepage. A dedicated FAQ page gives search engines a cleaner source of answerable content and gives visitors a page they can revisit before joining.",
+              "Important class questions deserve a simple page of their own so you can review the details without searching through the whole site.",
             ],
           },
           {
@@ -81,7 +81,7 @@ export default function FAQPage() {
           {
             href: "/online-yoga-classes-in-hindi",
             title: "Read about the Hindi class format",
-            description: "See why language is one of the strongest differentiators on the site.",
+            description: "Learn more about how the classes are taught in Hindi.",
           },
           {
             href: "/contact",
