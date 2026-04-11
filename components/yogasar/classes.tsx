@@ -10,6 +10,7 @@ const classFeatures = [
     description:
       "Gentle guided movement to ease stiffness, open the joints, and help the body move more comfortably in daily life.",
     image: "/images/class-flexibility.jpg",
+    alt: "Woman practicing a gentle flexibility-focused yoga pose at home",
     note: "For finding peace",
     format: "Live instructions that helps to stay calm, clear, and focused in life.",
   },
@@ -18,6 +19,7 @@ const classFeatures = [
     description:
       "Clear, easy instructions in Hindi guide you to sit, stand, and move with improved balance, posture, and confidence.",
     image: "/images/class-posture.jpg",
+    alt: "Woman practicing a yoga posture that emphasizes alignment and balance",
     note: "Clarity in practice",
     format: "Simple cues in Hindi help you understand how to move with better balance and control.",
   },
@@ -26,6 +28,7 @@ const classFeatures = [
     description:
       "Each class includes breathing-based work that supports focus, relaxation, and a more settled mind.",
     image: "/images/class-breathing.jpg",
+    alt: "Woman seated calmly during a breath-focused yoga practice",
     note: "Useful for busy routines",
     format: "Breathing-based work that supports focus, relaxation, and a more settled mind.",
   },
@@ -34,6 +37,7 @@ const classFeatures = [
     description:
       "Build strength, stability, and body confidence at a steady pace so the practice feels supportive, sustainable, and never overwhelming.",
     image: "/images/class-strength.jpg",
+    alt: "Woman holding a strength-building yoga pose during guided class practice",
     note: "Live feedback in Hindi",
     format: "Build stability gradually so the practice feels sustainable instead of overwhelming.",
   },
@@ -91,7 +95,7 @@ function DesktopCard({
           <motion.div className="absolute inset-0" style={{ scale: imageScale, y: imageY }}>
             <Image
               src={feature.image}
-              alt={feature.title}
+              alt={feature.alt}
               fill
               className="object-cover"
               sizes="(max-width: 1024px) 100vw, 52vw"
@@ -123,7 +127,7 @@ function MobileCard({
       <div className="relative aspect-[16/11] overflow-hidden">
         <Image
           src={feature.image}
-          alt={feature.title}
+          alt={feature.alt}
           fill
           className="object-cover"
           sizes="100vw"

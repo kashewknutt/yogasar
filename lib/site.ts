@@ -4,7 +4,9 @@ export const siteConfig = {
   description:
     "Ladies-only online yoga classes in Hindi with Acharya Sarika Disawal. Live classes for women across India with a simple WhatsApp-based joining process.",
   url: (process.env.NEXT_PUBLIC_SITE_URL || "https://www.yogasar.com").replace(/\/$/, ""),
+  htmlLang: "en-IN",
   locale: "en_IN",
+  country: "IN",
   contact: {
     phoneDisplay: "93022 39879",
     phoneLink: "+91 9302239879",

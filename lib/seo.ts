@@ -9,6 +9,10 @@ type MetadataInput = {
   image?: string
   type?: "website" | "article"
   noIndex?: boolean
+  category?: string
+  publishedTime?: string
+  modifiedTime?: string
+  section?: string
 }
 
 type BreadcrumbItem = {
@@ -28,6 +32,10 @@ export function buildMetadata({
   image = siteConfig.socialImage,
   type = "website",
   noIndex = false,
+  category = "Health and Wellness",
+  publishedTime,
+  modifiedTime,
+  section,
 }: MetadataInput): Metadata {
   const canonical = absoluteUrl(path)
   const fullTitle = `${title} | ${siteConfig.name}`
@@ -39,6 +47,17 @@ export function buildMetadata({
     alternates: {
       canonical,
     },
+    authors: [{ name: siteConfig.teacher.name }],
+    creator: siteConfig.teacher.name,
+    publisher: siteConfig.name,
+    category,
+    classification: "Yoga, Wellness, Online Classes",
+    referrer: "origin-when-cross-origin",
+    formatDetection: {
+      email: false,
+      address: false,
+      telephone: true,
+    },
     openGraph: {
       title: fullTitle,
       description,
@@ -46,6 +65,7 @@ export function buildMetadata({
       url: canonical,
       siteName: siteConfig.name,
       locale: siteConfig.locale,
+      countryName: "India",
       images: [
         {
           url: absoluteUrl(image),
@@ -54,6 +74,14 @@ export function buildMetadata({
           alt: title,
         },
       ],
+      ...(type === "article"
+        ? {
+            publishedTime,
+            modifiedTime,
+            section,
+            authors: [siteConfig.teacher.name],
+          }
+        : {}),
     },
     twitter: {
       card: "summary_large_image",
@@ -65,11 +93,31 @@ export function buildMetadata({
       ? {
           index: false,
           follow: false,
+          googleBot: {
+            index: false,
+            follow: false,
+          },
         }
       : {
           index: true,
           follow: true,
+          googleBot: {
+            index: true,
+            follow: true,
+            "max-image-preview": "large",
+            "max-snippet": -1,
+            "max-video-preview": -1,
+          },
         },
+    other: {
+      language: siteConfig.htmlLang,
+      "geo.region": siteConfig.country,
+      "geo.country": siteConfig.country,
+      coverage: "India",
+      distribution: "global",
+      target: "Women seeking live online yoga classes in Hindi",
+      subject: "Online yoga classes for women in India",
+    },
   }
 }
 

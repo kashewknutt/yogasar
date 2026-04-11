@@ -62,7 +62,7 @@ export function Hero() {
             <div className="relative overflow-hidden rounded-[var(--shell-radius)]">
               <Image
                 src="/images/hero-yoga.jpg"
-                alt="Peaceful yoga setup for online classes at home"
+                alt="Yoga practice space prepared for live online Hindi yoga classes at home"
                 width={720}
                 height={700}
                 className="aspect-[4/3.9] w-full object-cover object-center"

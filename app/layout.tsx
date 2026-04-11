@@ -17,7 +17,17 @@ export const metadata: Metadata = {
   description: siteConfig.description,
   keywords: ['online yoga classes for ladies', 'hindi yoga classes online', 'online yoga classes for women in India', 'live yoga classes in Hindi', 'ladies yoga classes from home'],
   authors: [{ name: siteConfig.teacher.name }],
+  creator: siteConfig.teacher.name,
+  publisher: siteConfig.name,
   applicationName: siteConfig.name,
+  category: 'Health and Wellness',
+  classification: 'Yoga, Wellness, Online Classes',
+  referrer: 'origin-when-cross-origin',
+  formatDetection: {
+    email: false,
+    address: false,
+    telephone: true,
+  },
   alternates: {
     canonical: '/',
   },
@@ -42,6 +52,25 @@ export const metadata: Metadata = {
     title: siteConfig.title,
     description: siteConfig.description,
     images: [siteConfig.socialImage],
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+      'max-video-preview': -1,
+    },
+  },
+  other: {
+    language: siteConfig.htmlLang,
+    'geo.region': siteConfig.country,
+    'geo.country': siteConfig.country,
+    coverage: 'India',
+    distribution: 'global',
+    target: 'Women seeking live online yoga classes in Hindi',
   },
   icons: {
     icon: [
@@ -74,7 +103,7 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en">
+    <html lang={siteConfig.htmlLang} dir="ltr">
       <body className="font-sans antialiased">
         <JsonLd data={graph([organizationSchema(), websiteSchema()])} />
         <Header />

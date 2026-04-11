@@ -36,6 +36,10 @@ export async function generateMetadata({
     path: post.path,
     keywords: post.keywords,
     type: "article",
+    category: "Yoga Education",
+    publishedTime: post.updatedAt,
+    modifiedTime: post.updatedAt,
+    section: post.eyebrow,
   })
 }
 
