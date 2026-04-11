@@ -1,12 +1,48 @@
 import type { Metadata, Viewport } from 'next'
 import { Analytics } from '@vercel/analytics/next'
+import { Footer } from '@/components/yogasar/footer'
+import { Header } from '@/components/yogasar/header'
+import { JsonLd } from '@/components/yogasar/json-ld'
+import { MobileWhatsAppBar } from '@/components/yogasar/mobile-whatsapp-bar'
+import { graph, organizationSchema, websiteSchema } from '@/lib/seo'
+import { siteConfig } from '@/lib/site'
 import './globals.css'
 
 export const metadata: Metadata = {
-  title: 'Online Yoga Classes for Ladies in Hindi | Across India | Yogasar',
-  description: 'Join ladies-only online yoga classes in Hindi with Acharya Sarika Disawal. Live classes for women across India, 5 days a week, from the comfort of home.',
+  metadataBase: new URL(siteConfig.url),
+  title: {
+    default: siteConfig.title,
+    template: `%s | ${siteConfig.name}`,
+  },
+  description: siteConfig.description,
   keywords: ['online yoga classes for ladies', 'hindi yoga classes online', 'online yoga classes for women in India', 'live yoga classes in Hindi', 'ladies yoga classes from home'],
-  authors: [{ name: 'Acharya Sarika Disawal' }],
+  authors: [{ name: siteConfig.teacher.name }],
+  applicationName: siteConfig.name,
+  alternates: {
+    canonical: '/',
+  },
+  openGraph: {
+    title: siteConfig.title,
+    description: siteConfig.description,
+    url: '/',
+    siteName: siteConfig.name,
+    locale: 'en_IN',
+    type: 'website',
+    images: [
+      {
+        url: siteConfig.socialImage,
+        width: 1200,
+        height: 630,
+        alt: siteConfig.title,
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: siteConfig.title,
+    description: siteConfig.description,
+    images: [siteConfig.socialImage],
+  },
   icons: {
     icon: [
       {
@@ -40,7 +76,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className="font-sans antialiased">
+        <JsonLd data={graph([organizationSchema(), websiteSchema()])} />
+        <Header />
         {children}
+        <Footer />
+        <MobileWhatsAppBar />
         <Analytics />
       </body>
     </html>

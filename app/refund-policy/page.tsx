@@ -1,43 +1,50 @@
-import type { Metadata } from "next"
-import Link from "next/link"
+import { LegalPage } from "@/components/yogasar/legal-page"
+import { breadcrumbSchema, buildMetadata, graph, webPageSchema } from "@/lib/seo"
+import { JsonLd } from "@/components/yogasar/json-ld"
 
-export const metadata: Metadata = {
-  title: "Refund Policy | Yogasar",
+export const metadata = buildMetadata({
+  title: "Refund Policy",
   description:
-    "Refund policy for Yogasar online yoga classes. Booked classes are non-refundable.",
-}
+    "Refund policy for Yogasar online yoga classes. Review the current refund position before joining.",
+  path: "/refund-policy",
+})
 
 export default function RefundPolicyPage() {
   return (
-    <main className="min-h-screen px-3 py-8 sm:px-4 sm:py-10">
-      <div className="page-shell max-w-3xl">
-        <Link
-          href="/"
-          className="text-[11px] uppercase tracking-[0.22em] text-[#56663c] underline underline-offset-4"
-        >
-          Back to home
-        </Link>
-
-        <div className="mt-8">
-          <h1 className="font-serif text-[clamp(2.1rem,4.2vw,3.4rem)] leading-[1.06] text-[#221f1a]">
-            Refund policy
-          </h1>
-
-          <div className="mt-6 space-y-5 text-base leading-8 text-[#4b4339]">
-            <p>
-              Booked classes are non-refundable.
-            </p>
-            <p>
-              Please confirm timings, language, class format, and batch details on WhatsApp before
-              joining.
-            </p>
-            <p>
-              If you have any questions before booking, ask in advance so everything is clear before
-              payment or confirmation.
-            </p>
-          </div>
-        </div>
-      </div>
-    </main>
+    <>
+      <JsonLd
+        data={graph([
+          webPageSchema({
+            title: "Refund Policy",
+            description:
+              "Refund policy for Yogasar online yoga classes. Review the current refund position before joining.",
+            path: "/refund-policy",
+          }),
+          breadcrumbSchema([
+            { name: "Home", path: "/" },
+            { name: "Refund Policy", path: "/refund-policy" },
+          ]),
+        ])}
+      />
+      <LegalPage
+        title="Refund policy"
+        intro="This page states the current refund position for Yogasar and gives visitors a dedicated trust page they can review before joining."
+        updatedLabel="11 April 2026"
+        sections={[
+          {
+            title: "Current policy",
+            body: [
+              "Booked classes are currently non-refundable. Prospective students should confirm batch timing, language, and suitability before joining.",
+            ],
+          },
+          {
+            title: "Why confirmation matters before payment",
+            body: [
+              "Yogasar uses a direct WhatsApp-based joining flow. That means students can ask practical questions in advance and make sure the class format is right for them before confirming their place.",
+            ],
+          },
+        ]}
+      />
+    </>
   )
 }

@@ -1,20 +1,20 @@
 "use client"
 
+import Link from "next/link"
 import { useEffect, useState } from "react"
 import { Menu, MessageCircle, X } from "lucide-react"
 import { Button } from "@/components/ui/button"
+import { enquiryWhatsappUrl } from "@/lib/site"
 
-const WHATSAPP_URL =
-  "https://wa.me/919302239879?text=Hi%2C%20I%20want%20to%20enquire%20about%20the%20ladies-only%20online%20yoga%20classes%20in%20Hindi."
+const WHATSAPP_URL = enquiryWhatsappUrl
 
 const navItems = [
-  { label: "Home", href: "#home" },
-  { label: "About", href: "#about" },
-  { label: "Classes", href: "#classes" },
-  { label: "Pricing", href: "#pricing" },
-  { label: "Teacher", href: "#teacher" },
-  { label: "Testimonials", href: "#testimonials" },
-  { label: "FAQ", href: "#faq" },
+  { label: "Home", href: "/" },
+  { label: "Online Classes", href: "/online-yoga-classes" },
+  { label: "Pricing", href: "/pricing" },
+  { label: "Blog", href: "/blog" },
+  { label: "FAQ", href: "/faq" },
+  { label: "Contact", href: "/contact" },
 ]
 
 export function Header() {
@@ -45,22 +45,22 @@ export function Header() {
           }}
         >
           <div className="flex h-14 items-center justify-between px-4 sm:h-16 sm:px-5 lg:h-[4.5rem] lg:px-7">
-            <a href="#home" className="flex flex-col">
+            <Link href="/" className="flex flex-col">
               <span className="font-serif text-xl text-[#384529] sm:text-2xl">Yogasar</span>
               <span className="text-[10px] uppercase tracking-[0.26em] text-[#5c554b] sm:text-[11px]">
                 Yoga in Hindi for ladies
               </span>
-            </a>
+            </Link>
 
             <nav className="hidden items-center gap-6 lg:flex">
               {navItems.map((item) => (
-                <a
+                <Link
                   key={item.label}
                   href={item.href}
                   className="text-sm font-medium tracking-[0.14em] text-[#4b4339] transition-colors hover:text-[#56663c]"
                 >
                   {item.label}
-                </a>
+                </Link>
               ))}
             </nav>
 
@@ -101,22 +101,29 @@ export function Header() {
             <div className="border-t border-[#d6cab8]/40 px-4 pb-4 pt-2 lg:hidden">
               <nav className="grid gap-2">
                 {navItems.map((item) => (
-                  <a
+                  <Link
                     key={item.label}
                     href={item.href}
                     onClick={() => setIsMobileMenuOpen(false)}
                     className="rounded-2xl px-4 py-3 text-sm font-medium tracking-[0.12em] text-[#312b24] transition-colors hover:bg-[#ede4d6]"
                   >
                     {item.label}
-                  </a>
+                  </Link>
                 ))}
-                <a
+                <Link
+                  href="/about-acharya-sarika-disawal"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                  className="rounded-2xl px-4 py-3 text-sm font-medium tracking-[0.12em] text-[#312b24] transition-colors hover:bg-[#ede4d6]"
+                >
+                  About Teacher
+                </Link>
+                <Link
                   href="/refund-policy"
                   onClick={() => setIsMobileMenuOpen(false)}
                   className="rounded-2xl px-4 py-3 text-sm font-medium tracking-[0.12em] text-[#312b24] transition-colors hover:bg-[#ede4d6]"
                 >
                   Refund Policy
-                </a>
+                </Link>
               </nav>
             </div>
           )}

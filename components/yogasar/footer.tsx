@@ -1,16 +1,25 @@
 import Link from "next/link"
 import { MessageCircle } from "lucide-react"
-
-const WHATSAPP_URL =
-  "https://wa.me/919302239879?text=Hi%2C%20I%20want%20to%20enquire%20about%20the%20ladies-only%20online%20yoga%20classes%20in%20Hindi."
+import { enquiryWhatsappUrl } from "@/lib/site"
 
 const quickLinks = [
-  { label: "Home", href: "#home" },
-  { label: "About", href: "#about" },
-  { label: "Classes", href: "#classes" },
-  { label: "Pricing", href: "#pricing" },
-  { label: "Teacher", href: "#teacher" },
-  { label: "FAQ", href: "#faq" },
+  { label: "Home", href: "/" },
+  { label: "Online classes", href: "/online-yoga-classes" },
+  { label: "Beginner yoga", href: "/beginner-yoga-classes-online" },
+  { label: "Yoga in Hindi", href: "/online-yoga-classes-in-hindi" },
+  { label: "Blog", href: "/blog" },
+  { label: "FAQ", href: "/faq" },
+]
+
+const trustLinks = [
+  { label: "About teacher", href: "/about-acharya-sarika-disawal" },
+  { label: "Pricing", href: "/pricing" },
+  { label: "Contact", href: "/contact" },
+  { label: "Refund policy", href: "/refund-policy" },
+  { label: "Privacy policy", href: "/privacy-policy" },
+  { label: "Terms and conditions", href: "/terms-and-conditions" },
+  { label: "Cancellation policy", href: "/cancellation-policy" },
+  { label: "Disclaimer", href: "/disclaimer" },
 ]
 
 export function Footer() {
@@ -28,7 +37,7 @@ export function Footer() {
                 Live online classes for women across India with Acharya Sarika Disawal.
               </p>
               <a
-                href={WHATSAPP_URL}
+                href={enquiryWhatsappUrl}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="mt-5 inline-flex items-center gap-2 text-sm tracking-[0.08em] text-[#d6bc78] transition-colors hover:text-white"
@@ -42,20 +51,29 @@ export function Footer() {
               <p className="text-[11px] uppercase tracking-[0.22em] text-[#d6bc78]">Navigate</p>
               <div className="mt-5 grid gap-3">
                 {quickLinks.map((link) => (
-                  <a key={link.label} href={link.href} className="text-sm text-[#f5f0e7]/78 transition-colors hover:text-white">
+                  <Link
+                    key={link.label}
+                    href={link.href}
+                    className="text-sm text-[#f5f0e7]/78 transition-colors hover:text-white"
+                  >
                     {link.label}
-                  </a>
+                  </Link>
                 ))}
               </div>
             </div>
 
             <div>
-              <p className="text-[11px] uppercase tracking-[0.22em] text-[#d6bc78]">Policies</p>
+              <p className="text-[11px] uppercase tracking-[0.22em] text-[#d6bc78]">Trust</p>
               <div className="mt-5 grid gap-3">
-                <Link href="/refund-policy" className="text-sm text-[#f5f0e7]/78 transition-colors hover:text-white">
-                  Refund policy
-                </Link>
-                <p className="text-sm leading-7 text-[#f5f0e7]/60">Booked classes are non-refundable.</p>
+                {trustLinks.map((link) => (
+                  <Link
+                    key={link.label}
+                    href={link.href}
+                    className="text-sm text-[#f5f0e7]/78 transition-colors hover:text-white"
+                  >
+                    {link.label}
+                  </Link>
+                ))}
               </div>
             </div>
           </div>
@@ -63,7 +81,7 @@ export function Footer() {
           <div className="fine-rule my-7" />
 
           <p className="text-xs uppercase tracking-[0.18em] text-[#f5f0e7]/52">
-            © {new Date().getFullYear()} Yogasar. All rights reserved.
+            Copyright {new Date().getFullYear()} Yogasar. All rights reserved.
           </p>
         </div>
       </div>
