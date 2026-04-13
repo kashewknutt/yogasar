@@ -5,7 +5,7 @@ import { breadcrumbSchema, buildMetadata, graph, webPageSchema } from "@/lib/seo
 export const metadata = buildMetadata({
   title: "Privacy Policy",
   description:
-    "Privacy policy for Yogasar, covering how enquiry information is handled for online yoga class communication.",
+    "Privacy policy for Yogsar, covering how enquiry information is handled for online yoga class communication.",
   path: "/privacy-policy",
 })
 
@@ -17,7 +17,7 @@ export default function PrivacyPolicyPage() {
           webPageSchema({
             title: "Privacy Policy",
             description:
-              "Privacy policy for Yogasar, covering how enquiry information is handled for online yoga class communication.",
+              "Privacy policy for Yogsar, covering how enquiry information is handled for online yoga class communication.",
             path: "/privacy-policy",
           }),
           breadcrumbSchema([
@@ -28,13 +28,13 @@ export default function PrivacyPolicyPage() {
       />
       <LegalPage
         title="Privacy policy"
-        intro="This page explains how Yogasar handles basic enquiry and class communication information."
+        intro="This page explains how Yogsar handles basic enquiry and class communication information."
         updatedLabel="11 April 2026"
         sections={[
           {
             title: "Information collected",
             body: [
-              "When someone contacts Yogasar, the information typically shared may include name, phone number, and enquiry details needed to discuss class timings, suitability, and joining.",
+              "When someone contacts Yogsar, the information typically shared may include name, phone number, and enquiry details needed to discuss class timings, suitability, and joining.",
             ],
           },
           {
@@ -46,7 +46,7 @@ export default function PrivacyPolicyPage() {
           {
             title: "Questions about privacy",
             body: [
-              "If you have questions about how your information is being handled, contact Yogasar before sharing anything beyond what is needed to discuss the classes.",
+              "If you have questions about how your information is being handled, contact Yogsar before sharing anything beyond what is needed to discuss the classes.",
             ],
           },
         ]}

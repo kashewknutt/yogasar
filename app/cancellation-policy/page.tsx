@@ -5,7 +5,7 @@ import { breadcrumbSchema, buildMetadata, graph, webPageSchema } from "@/lib/seo
 export const metadata = buildMetadata({
   title: "Cancellation Policy",
   description:
-    "Cancellation policy for Yogasar online yoga classes and class enquiries.",
+    "Cancellation policy for Yogsar online yoga classes and class enquiries.",
   path: "/cancellation-policy",
 })
 
@@ -17,7 +17,7 @@ export default function CancellationPolicyPage() {
           webPageSchema({
             title: "Cancellation Policy",
             description:
-              "Cancellation policy for Yogasar online yoga classes and class enquiries.",
+              "Cancellation policy for Yogsar online yoga classes and class enquiries.",
             path: "/cancellation-policy",
           }),
           breadcrumbSchema([

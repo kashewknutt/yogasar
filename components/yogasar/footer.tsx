@@ -29,7 +29,7 @@ export function Footer() {
         <div className="tone-dark rounded-[2rem] px-6 py-8 sm:px-8 sm:py-10">
           <div className="grid gap-8 lg:grid-cols-[1.2fr_0.8fr_0.8fr]">
             <div>
-              <p className="font-serif text-[2rem] text-[#fffdf8]">Yogasar</p>
+              <p className="font-serif text-[2rem] text-[#fffdf8]">Yogsar</p>
               <p className="mt-2 text-[11px] uppercase tracking-[0.22em] text-[#d6bc78]">
                 Yoga in Hindi for ladies
               </p>
@@ -81,7 +81,7 @@ export function Footer() {
           <div className="fine-rule my-7" />
 
           <p className="text-xs uppercase tracking-[0.18em] text-[#f5f0e7]/52">
-            Copyright {new Date().getFullYear()} Yogasar. All rights reserved.
+            Copyright {new Date().getFullYear()} Yogsar. All rights reserved.
           </p>
         </div>
       </div>

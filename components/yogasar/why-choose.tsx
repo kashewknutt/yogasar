@@ -29,7 +29,7 @@ export function WhyChoose() {
       <div className="page-shell">
         <div className="section-frame px-5 py-7 sm:px-8 sm:py-8 lg:px-10">
           <div className="mb-8 max-w-3xl">
-            <span className="eyebrow mb-5">Why Yogasar</span>
+            <span className="eyebrow mb-5">Why Yogsar</span>
             <h2 className="section-title max-w-3xl lg:max-w-4xl">
               Why these classes work well for regular home practice.
             </h2>

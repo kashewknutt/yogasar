@@ -5,7 +5,7 @@ import { breadcrumbSchema, buildMetadata, graph, webPageSchema } from "@/lib/seo
 export const metadata = buildMetadata({
   title: "Terms and Conditions",
   description:
-    "Terms and conditions for Yogasar's online yoga classes in Hindi for women.",
+    "Terms and conditions for Yogsar's online yoga classes in Hindi for women.",
   path: "/terms-and-conditions",
 })
 
@@ -17,7 +17,7 @@ export default function TermsPage() {
           webPageSchema({
             title: "Terms and Conditions",
             description:
-              "Terms and conditions for Yogasar's online yoga classes in Hindi for women.",
+              "Terms and conditions for Yogsar's online yoga classes in Hindi for women.",
             path: "/terms-and-conditions",
           }),
           breadcrumbSchema([
@@ -28,7 +28,7 @@ export default function TermsPage() {
       />
       <LegalPage
         title="Terms and conditions"
-        intro="These terms set the basic expectations for accessing and participating in Yogasar's online class offer."
+        intro="These terms set the basic expectations for accessing and participating in Yogsar's online class offer."
         updatedLabel="11 April 2026"
         sections={[
           {
@@ -46,7 +46,7 @@ export default function TermsPage() {
           {
             title: "Changes and updates",
             body: [
-              "Yogasar may update class details, page content, or policies over time. The latest version shown on the site should be treated as the current reference point.",
+              "Yogsar may update class details, page content, or policies over time. The latest version shown on the site should be treated as the current reference point.",
             ],
           },
         ]}

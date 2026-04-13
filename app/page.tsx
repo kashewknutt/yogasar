@@ -29,7 +29,7 @@ export const metadata = buildMetadata({
   ],
 })
 
-export default function YogasarPage() {
+export default function YogsarPage() {
   return (
     <>
       <JsonLd

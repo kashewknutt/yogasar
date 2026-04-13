@@ -44,13 +44,13 @@ export function ContentHubs() {
     <section className="section-wrap pt-6">
       <div className="page-shell">
         <div className="mb-8 max-w-3xl">
-          <span className="eyebrow mb-5">Explore Yogasar</span>
+          <span className="eyebrow mb-5">Explore Yogsar</span>
           <h2 className="section-title">
             Explore helpful pages about the classes, the teacher, and home yoga practice.
           </h2>
           <p className="section-lead mt-5">
             Whether you want class details, beginner guidance, or simple answers before joining,
-            these pages help you understand Yogasar more clearly.
+            these pages help you understand Yogsar more clearly.
           </p>
         </div>
 

@@ -5,7 +5,7 @@ import { breadcrumbSchema, buildMetadata, graph, webPageSchema } from "@/lib/seo
 export const metadata = buildMetadata({
   title: "Disclaimer",
   description:
-    "General site and wellness disclaimer for Yogasar's online yoga classes and educational content.",
+    "General site and wellness disclaimer for Yogsar's online yoga classes and educational content.",
   path: "/disclaimer",
 })
 
@@ -17,7 +17,7 @@ export default function DisclaimerPage() {
           webPageSchema({
             title: "Disclaimer",
             description:
-              "General site and wellness disclaimer for Yogasar's online yoga classes and educational content.",
+              "General site and wellness disclaimer for Yogsar's online yoga classes and educational content.",
             path: "/disclaimer",
           }),
           breadcrumbSchema([
@@ -28,13 +28,13 @@ export default function DisclaimerPage() {
       />
       <LegalPage
         title="Disclaimer"
-        intro="This page clarifies how the educational and service content on Yogasar should be understood."
+        intro="This page clarifies how the educational and service content on Yogsar should be understood."
         updatedLabel="11 April 2026"
         sections={[
           {
             title: "General information only",
             body: [
-              "The content on this site is provided for general information about Yogasar's classes and related yoga topics. It should not be treated as medical advice, diagnosis, or treatment.",
+              "The content on this site is provided for general information about Yogsar's classes and related yoga topics. It should not be treated as medical advice, diagnosis, or treatment.",
             ],
           },
           {

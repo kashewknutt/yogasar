@@ -4,9 +4,9 @@ import { breadcrumbSchema, buildMetadata, graph, webPageSchema } from "@/lib/seo
 import { siteConfig } from "@/lib/site"
 
 export const metadata = buildMetadata({
-  title: "Contact Yogasar",
+  title: "Contact Yogsar",
   description:
-    "Contact Yogasar to ask about timings, batches, and suitability for the online yoga classes in Hindi.",
+    "Contact Yogsar to ask about timings, batches, and suitability for the online yoga classes in Hindi.",
   path: "/contact",
   keywords: [
     "contact yoga class",
@@ -21,9 +21,9 @@ export default function ContactPage() {
       <JsonLd
         data={graph([
           webPageSchema({
-            title: "Contact Yogasar",
+            title: "Contact Yogsar",
             description:
-              "Contact Yogasar to ask about timings, batches, and suitability for the online yoga classes in Hindi.",
+              "Contact Yogsar to ask about timings, batches, and suitability for the online yoga classes in Hindi.",
             path: "/contact",
           }),
           breadcrumbSchema([
@@ -64,12 +64,12 @@ export default function ContactPage() {
         ]}
         faqs={[
           {
-            question: "What is the fastest way to contact Yogasar?",
+            question: "What is the fastest way to contact Yogsar?",
             answer:
               "The site is set up around WhatsApp as the primary way to ask about timings and joining.",
           },
           {
-            question: "What should I ask when I contact Yogasar?",
+            question: "What should I ask when I contact Yogsar?",
             answer:
               "Ask about timings, beginner suitability, the class format, and whether the classes fit your routine.",
           },
@@ -88,7 +88,7 @@ export default function ContactPage() {
           {
             href: "/about-acharya-sarika-disawal",
             title: "Learn about the teacher",
-            description: "Read the dedicated teacher page before you contact Yogasar.",
+            description: "Read the dedicated teacher page before you contact Yogsar.",
           },
         ]}
         breadcrumbs={[

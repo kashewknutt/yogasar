@@ -21,7 +21,7 @@ export function About() {
               A practical yoga routine that fits home life.
             </h2>
             <p className="section-lead mt-5 max-w-xl">
-              Yogasar is designed for women who want clear, supportive yoga instruction without
+              Yogsar is designed for women who want clear, supportive yoga instruction without
               having to travel. The classes are live, taught in Hindi, and built to be approachable
               whether someone is beginning for the first time or returning after a break.
             </p>

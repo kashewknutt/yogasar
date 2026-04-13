@@ -6,7 +6,7 @@ import { JsonLd } from "@/components/yogasar/json-ld"
 export const metadata = buildMetadata({
   title: "Yoga Blog for Beginners, Women, and Home Practice",
   description:
-    "Explore Yogasar articles on beginner yoga, yoga at home, pranayama, morning routines, and women-focused yoga topics.",
+    "Explore Yogsar articles on beginner yoga, yoga at home, pranayama, morning routines, and women-focused yoga topics.",
   path: "/blog",
   keywords: [
     "yoga blog",
@@ -25,7 +25,7 @@ export default function BlogPage() {
           webPageSchema({
             title: "Yoga Blog for Beginners, Women, and Home Practice",
             description:
-              "Explore Yogasar articles on beginner yoga, yoga at home, pranayama, morning routines, and women-focused yoga topics.",
+              "Explore Yogsar articles on beginner yoga, yoga at home, pranayama, morning routines, and women-focused yoga topics.",
             path: "/blog",
           }),
           breadcrumbSchema([

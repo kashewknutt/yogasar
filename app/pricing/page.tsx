@@ -5,7 +5,7 @@ import { breadcrumbSchema, buildMetadata, faqSchema, graph, webPageSchema } from
 export const metadata = buildMetadata({
   title: "Pricing for Online Yoga Classes",
   description:
-    "View Yogasar pricing for live online yoga classes in Hindi for women across India.",
+    "View Yogsar pricing for live online yoga classes in Hindi for women across India.",
   path: "/pricing",
   keywords: [
     "online yoga class price",
@@ -37,7 +37,7 @@ export default function PricingPage() {
           webPageSchema({
             title: "Pricing for Online Yoga Classes",
             description:
-              "View Yogasar pricing for live online yoga classes in Hindi for women across India.",
+              "View Yogsar pricing for live online yoga classes in Hindi for women across India.",
             path: "/pricing",
           }),
           breadcrumbSchema([

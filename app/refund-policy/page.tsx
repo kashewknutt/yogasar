@@ -5,7 +5,7 @@ import { JsonLd } from "@/components/yogasar/json-ld"
 export const metadata = buildMetadata({
   title: "Refund Policy",
   description:
-    "Refund policy for Yogasar online yoga classes. Review the current refund position before joining.",
+    "Refund policy for Yogsar online yoga classes. Review the current refund position before joining.",
   path: "/refund-policy",
 })
 
@@ -17,7 +17,7 @@ export default function RefundPolicyPage() {
           webPageSchema({
             title: "Refund Policy",
             description:
-              "Refund policy for Yogasar online yoga classes. Review the current refund position before joining.",
+              "Refund policy for Yogsar online yoga classes. Review the current refund position before joining.",
             path: "/refund-policy",
           }),
           breadcrumbSchema([
@@ -28,7 +28,7 @@ export default function RefundPolicyPage() {
       />
       <LegalPage
         title="Refund policy"
-        intro="This page states the current refund position for Yogasar and gives visitors a dedicated trust page they can review before joining."
+        intro="This page states the current refund position for Yogsar and gives visitors a dedicated trust page they can review before joining."
         updatedLabel="11 April 2026"
         sections={[
           {
@@ -40,7 +40,7 @@ export default function RefundPolicyPage() {
           {
             title: "Why confirmation matters before payment",
             body: [
-              "Yogasar uses a direct WhatsApp-based joining flow. That means students can ask practical questions in advance and make sure the class format is right for them before confirming their place.",
+              "Yogsar uses a direct WhatsApp-based joining flow. That means students can ask practical questions in advance and make sure the class format is right for them before confirming their place.",
             ],
           },
         ]}

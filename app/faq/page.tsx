@@ -6,7 +6,7 @@ import { coreFaqs } from "@/lib/site"
 export const metadata = buildMetadata({
   title: "FAQ for Online Yoga Classes in Hindi",
   description:
-    "Answers to common questions about Yogasar's online yoga classes in Hindi for women across India.",
+    "Answers to common questions about Yogsar's online yoga classes in Hindi for women across India.",
   path: "/faq",
   keywords: [
     "online yoga classes faq",
@@ -37,7 +37,7 @@ export default function FAQPage() {
           webPageSchema({
             title: "FAQ for Online Yoga Classes in Hindi",
             description:
-              "Answers to common questions about Yogasar's online yoga classes in Hindi for women across India.",
+              "Answers to common questions about Yogsar's online yoga classes in Hindi for women across India.",
             path: "/faq",
           }),
           breadcrumbSchema([

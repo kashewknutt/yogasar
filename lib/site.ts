@@ -1,6 +1,6 @@
 export const siteConfig = {
-  name: "Yogasar",
-  title: "Online Yoga Classes for Ladies in Hindi | Yogasar",
+  name: "Yogsar",
+  title: "Online Yoga Classes for Ladies in Hindi | Yogsar",
   description:
     "Ladies-only online yoga classes in Hindi with Acharya Sarika Disawal. Live classes for women across India with a simple WhatsApp-based joining process.",
   url: (process.env.NEXT_PUBLIC_SITE_URL || "https://www.yogasar.com").replace(/\/$/, ""),

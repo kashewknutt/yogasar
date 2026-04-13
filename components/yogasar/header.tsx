@@ -46,7 +46,7 @@ export function Header() {
         >
           <div className="flex h-14 items-center justify-between px-4 sm:h-16 sm:px-5 lg:h-[4.5rem] lg:px-7">
             <Link href="/" className="flex flex-col">
-              <span className="font-serif text-xl text-[#384529] sm:text-2xl">Yogasar</span>
+              <span className="font-serif text-xl text-[#384529] sm:text-2xl">Yogsar</span>
               <span className="text-[10px] uppercase tracking-[0.26em] text-[#5c554b] sm:text-[11px]">
                 Yoga in Hindi for ladies
               </span>

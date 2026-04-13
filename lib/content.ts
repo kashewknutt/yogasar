@@ -45,10 +45,10 @@ export const servicePages: ServicePageContent[] = [
     path: "/online-yoga-classes",
     title: "Online Yoga Classes in Hindi for Ladies Across India",
     description:
-      "Explore Yogasar online yoga classes for women across India. Live Hindi sessions, WhatsApp joining, and a simple structure for home practice.",
+      "Explore Yogsar online yoga classes for women across India. Live Hindi sessions, WhatsApp joining, and a simple structure for home practice.",
     eyebrow: "Online yoga classes",
     intro:
-      "This is the main service hub for Yogasar. It explains the class format, who the classes suit, why Hindi instruction matters, and how women across India can join a steady live routine from home.",
+      "This is the main service hub for Yogsar. It explains the class format, who the classes suit, why Hindi instruction matters, and how women across India can join a steady live routine from home.",
     keywords: [
       "online yoga classes",
       "yoga class",
@@ -64,9 +64,9 @@ export const servicePages: ServicePageContent[] = [
     ],
     quickAnswers: [
       {
-        question: "What does Yogasar offer?",
+        question: "What does Yogsar offer?",
         answer:
-          "Yogasar offers live online yoga classes in Hindi for women who want a practical home routine instead of a generic recorded plan.",
+          "Yogsar offers live online yoga classes in Hindi for women who want a practical home routine instead of a generic recorded plan.",
       },
       {
         question: "What makes these classes different?",
@@ -79,7 +79,7 @@ export const servicePages: ServicePageContent[] = [
         title: "A clear class format for women learning from home",
         body: [
           "When women look for online yoga classes, they usually want to know whether the classes are live, who teaches them, what language is used, and whether the format fits home life. This page answers those practical questions clearly.",
-          "Yogasar is designed for women who want live Hindi instruction, a simple joining path, and a steady routine instead of an overwhelming wellness setup.",
+          "Yogsar is designed for women who want live Hindi instruction, a simple joining path, and a steady routine instead of an overwhelming wellness setup.",
         ],
         bullets: [
           "Live sessions instead of a passive video library",
@@ -236,7 +236,7 @@ export const servicePages: ServicePageContent[] = [
       "Online yoga classes in Hindi with live instruction for women who prefer clear, natural guidance over English-first class formats.",
     eyebrow: "Hindi yoga classes",
     intro:
-      "Language fit is one of Yogasar's strongest search and conversion advantages. This page is designed for women who specifically search for yoga classes in Hindi because they follow instructions better in that language.",
+      "Language fit is one of Yogsar's strongest search and conversion advantages. This page is designed for women who specifically search for yoga classes in Hindi because they follow instructions better in that language.",
     keywords: [
       "online yoga classes in hindi",
       "hindi yoga classes online",
@@ -326,7 +326,7 @@ export const servicePages: ServicePageContent[] = [
       "Live online yoga classes for women across India with Hindi instruction, simple joining, and a home-friendly weekly routine.",
     eyebrow: "Women across India",
     intro:
-      "This page makes it clear that Yogasar is not limited to one city and that women across India can join the live class format after confirming a suitable batch.",
+      "This page makes it clear that Yogsar is not limited to one city and that women across India can join the live class format after confirming a suitable batch.",
     keywords: [
       "online yoga classes for women in india",
       "yoga classes for women online india",
@@ -620,7 +620,7 @@ export const servicePages: ServicePageContent[] = [
       {
         question: "Can beginners join live classes?",
         answer:
-          "Yes. Beginner-friendly positioning is one of the core parts of the Yogasar offer.",
+          "Yes. Beginner-friendly positioning is one of the core parts of the Yogsar offer.",
       },
       {
         question: "How do I know whether the timing will suit me?",
@@ -723,7 +723,7 @@ export const servicePages: ServicePageContent[] = [
     path: "/pranayama-classes-online",
     title: "Pranayama Classes Online in Hindi",
     description:
-      "Learn about Yogasar's pranayama-focused online class support in Hindi for women who want a calmer, more steady home routine.",
+      "Learn about Yogsar's pranayama-focused online class support in Hindi for women who want a calmer, more steady home routine.",
     eyebrow: "Pranayama classes",
     intro:
       "This page is for women who are especially interested in breathwork and want to understand how pranayama fits into a guided class experience.",
@@ -970,7 +970,7 @@ export const blogPosts: BlogPostContent[] = [
         title: "Women often choose yoga by fit, not by trend",
         body: [
           "For many women, the key question is not which trendy style is most popular. It is whether the class can fit a real routine, feel comfortable to join, and be explained in a way that makes sense.",
-          "That is one reason the Yogasar service focus is strong. It is specific about women, Hindi guidance, and home-based practice rather than trying to serve every audience with the same message.",
+          "That is one reason the Yogsar service focus is strong. It is specific about women, Hindi guidance, and home-based practice rather than trying to serve every audience with the same message.",
         ],
       },
       {
@@ -1006,7 +1006,7 @@ export const blogPosts: BlogPostContent[] = [
       {
         question: "Can women join from anywhere in India?",
         answer:
-          "Yes. Yogasar is positioned as an online option for women across India.",
+          "Yes. Yogsar is positioned as an online option for women across India.",
       },
     ],
     relatedServiceSlugs: [
@@ -1158,7 +1158,7 @@ export const blogPosts: BlogPostContent[] = [
     relatedBlogSlugs: ["yoga-for-beginners-at-home"],
     ctaTitle: "If the sequence feels easier with guidance, move from reading to live support.",
     ctaDescription:
-      "Ask how Surya Namaskar fits into the Yogasar class format and whether it suits beginners.",
+      "Ask how Surya Namaskar fits into the Yogsar class format and whether it suits beginners.",
     updatedLabel,
     updatedAt,
   },
@@ -1612,7 +1612,7 @@ export const blogPosts: BlogPostContent[] = [
         title: "Why I needed a proper website",
         body: [
           "My classes were already built around live Hindi guidance, a simple joining process, and a routine that women could follow from home. What I needed was a website that could present all of that properly and clearly.",
-          "I wanted women to understand the classes, the teacher, the timings process, and the overall feel of Yogasar without confusion. The website needed to feel calm, trustworthy, and easy to use.",
+          "I wanted women to understand the classes, the teacher, the timings process, and the overall feel of Yogsar without confusion. The website needed to feel calm, trustworthy, and easy to use.",
         ],
       },
       {
@@ -1651,10 +1651,10 @@ export const blogPosts: BlogPostContent[] = [
       {
         question: "What is Valnee Solutions mentioned here for?",
         answer:
-          "Valnee Solutions is mentioned as the team that helped create the Yogasar website and turn it into a better platform for the online classes.",
+          "Valnee Solutions is mentioned as the team that helped create the Yogsar website and turn it into a better platform for the online classes.",
       },
       {
-        question: "Why does this matter for Yogasar?",
+        question: "Why does this matter for Yogsar?",
         answer:
           "Because a clearer and more complete website makes it easier for women to understand the classes and reach out when they are ready to join.",
       },

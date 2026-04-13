@@ -12,7 +12,7 @@ import { siteConfig } from "@/lib/site"
 export const metadata = buildMetadata({
   title: "About Acharya Sarika Disawal",
   description:
-    "Learn about Acharya Sarika Disawal, the teacher behind Yogasar's online yoga classes in Hindi for women across India.",
+    "Learn about Acharya Sarika Disawal, the teacher behind Yogsar's online yoga classes in Hindi for women across India.",
   path: "/about-acharya-sarika-disawal",
   keywords: [
     "Acharya Sarika Disawal",
@@ -29,7 +29,7 @@ export default function AboutTeacherPage() {
           webPageSchema({
             title: "About Acharya Sarika Disawal",
             description:
-              "Learn about Acharya Sarika Disawal, the teacher behind Yogasar's online yoga classes in Hindi for women across India.",
+              "Learn about Acharya Sarika Disawal, the teacher behind Yogsar's online yoga classes in Hindi for women across India.",
             path: "/about-acharya-sarika-disawal",
           }),
           personSchema(),
@@ -42,7 +42,7 @@ export default function AboutTeacherPage() {
       <SharedContentPage
         eyebrow="About the teacher"
         title="Meet Acharya Sarika Disawal"
-        intro="Learn more about the teacher behind Yogasar and the approach she brings to live online yoga classes in Hindi."
+        intro="Learn more about the teacher behind Yogsar and the approach she brings to live online yoga classes in Hindi."
         highlights={[
           { label: "Teacher", value: siteConfig.teacher.name },
           { label: "Credential", value: siteConfig.teacher.credential },
@@ -78,7 +78,7 @@ export default function AboutTeacherPage() {
         ]}
         faqs={[
           {
-            question: "Who teaches the classes at Yogasar?",
+            question: "Who teaches the classes at Yogsar?",
             answer: "The classes are taught by Acharya Sarika Disawal.",
           },
           {
@@ -104,7 +104,7 @@ export default function AboutTeacherPage() {
           },
           {
             href: "/contact",
-            title: "Contact Yogasar",
+            title: "Contact Yogsar",
             description: "Ask questions about timings, suitability, and the joining process.",
           },
         ]}
